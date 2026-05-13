@@ -1,0 +1,32 @@
+{
+  "_comment": "KoiSlabs shift schedule. Times are 24-hour, Pacific Time. Day shift 10am-7pm, overnight 7pm-5am next day. Both shifts run every day.",
+
+  "monday": [
+    {"start": "10:00", "end": "19:00", "message_key": "day_shift"},
+    {"start": "19:00", "end": "05:00", "message_key": "overnight_shift"}
+  ],
+  "tuesday": [
+    {"start": "10:00", "end": "19:00", "message_key": "day_shift"},
+    {"start": "19:00", "end": "05:00", "message_key": "overnight_shift"}
+  ],
+  "wednesday": [
+    {"start": "10:00", "end": "19:00", "message_key": "day_shift"},
+    {"start": "19:00", "end": "05:00", "message_key": "overnight_shift"}
+  ],
+  "thursday": [
+    {"start": "10:00", "end": "19:00", "message_key": "day_shift"},
+    {"start": "19:00", "end": "05:00", "message_key": "overnight_shift"}
+  ],
+  "friday": [
+    {"start": "10:00", "end": "19:00", "message_key": "day_shift"},
+    {"start": "19:00", "end": "05:00", "message_key": "overnight_shift"}
+  ],
+  "saturday": [
+    {"start": "10:00", "end": "19:00", "message_key": "day_shift"},
+    {"start": "19:00", "end": "05:00", "message_key": "overnight_shift"}
+  ],
+  "sunday": [
+    {"start": "10:00", "end": "19:00", "message_key": "day_shift"},
+    {"start": "19:00", "end": "05:00", "message_key": "overnight_shift"}
+  ]
+}

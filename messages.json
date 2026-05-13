@@ -1,0 +1,25 @@
+{
+  "_comment": "KoiSlabs Discord notification messages by shift group and day of week. Edit any message here to update what posts to Discord — no code changes needed.",
+
+  "day_shift": {
+    "_streamers": "Mon: Sahara & Presley | Tue-Fri: Kozy & Matthew | Sat-Sun: Presley & Sahara",
+    "monday": "✨ Sahara & Presley are LIVE on KoiSlabs and the auctions are STARTING! 🔥\n⚡ Kick off your week right — From 10:00AM to 7:00PM PST, KoiSlabs is auctioning slabs and you don't want to miss a bid!\n👀 Watch LIVE: https://www.tiktok.com/@koislabs/live",
+    "tuesday": "🌟 Kozy & Matthew are back and LIVE on KoiSlabs! 💥\n🎯 Tuesday's looking good — From 10:00AM to 7:00PM PST, the auctions are LIVE and KoiSlabs is not slowing down!\n🚀 Watch LIVE: https://www.tiktok.com/@koislabs/live",
+    "wednesday": "🔥 Kozy & Matthew are LIVE on KoiSlabs and the bids are OPEN! 🎉\n🌊 We're keeping the energy going — From 10:00AM to 7:00PM PST, KoiSlabs is auctioning slabs and you need to be here!\n🎮 Watch LIVE: https://www.tiktok.com/@koislabs/live",
+    "thursday": "🏆 Kozy & Matthew are LIVE on KoiSlabs and the auctions are HITTING! 😤\n🔥 Don't sleep on this — From 10:00AM to 7:00PM PST, KoiSlabs is going crazy with slab auctions!\n⚡ Watch LIVE: https://www.tiktok.com/@koislabs/live",
+    "friday": "🎯 Kozy & Matthew are LIVE on KoiSlabs and closing out the week! 🌟\n💫 Friday means the auctions are POPPING — From 10:00AM to 7:00PM PST, KoiSlabs is sending the week off right!\n🔥 Watch LIVE: https://www.tiktok.com/@koislabs/live",
+    "saturday": "✨ Presley & Sahara are LIVE on KoiSlabs and the weekend auctions are HERE! 🔥\n⚡ Saturday is looking good — From 10:00AM to 7:00PM PST, KoiSlabs is auctioning slabs and you don't want to miss a bid!\n👀 Watch LIVE: https://www.tiktok.com/@koislabs/live",
+    "sunday": "🌟 Presley & Sahara are LIVE on KoiSlabs and the Sunday auctions are STARTING! 💥\n🎯 Sunday Funday — From 10:00AM to 7:00PM PST, KoiSlabs is keeping the energy up and the auctions are going strong!\n🚀 Watch LIVE: https://www.tiktok.com/@koislabs/live"
+  },
+
+  "overnight_shift": {
+    "_streamers": "Mon: Adonis | Tue-Fri: Scooby | Sat-Sun: Adonis",
+    "monday": "🌙 The night shift is HERE and Adonis is LIVE on KoiSlabs!\n💫 From 7:00PM to 5:00AM PST, KoiSlabs keeps the auctions going all night long — get in here before you miss a bid!\n⭐ Watch LIVE: https://www.tiktok.com/@koislabs/live",
+    "tuesday": "🦉 Scooby has clocked in and is LIVE on KoiSlabs!\n✨ The night crew is pulling up — From 7:00PM to 5:00AM PST, KoiSlabs never stops and neither do the auctions!\n🌟 Watch LIVE: https://www.tiktok.com/@koislabs/live",
+    "wednesday": "🌌 Scooby is LIVE on KoiSlabs and the night shift is in full effect!\n💥 Late night auctions hit different — From 7:00PM to 5:00AM PST, KoiSlabs is keeping the energy alive!\n🔥 Watch LIVE: https://www.tiktok.com/@koislabs/live",
+    "thursday": "🌠 Scooby is LIVE on KoiSlabs and the night crew is taking over!\n🎯 Don't sleep on this — From 7:00PM to 5:00AM PST, KoiSlabs is auctioning slabs deep into the night!\n💫 Watch LIVE: https://www.tiktok.com/@koislabs/live",
+    "friday": "🌙 Scooby is LIVE on KoiSlabs and the vibes are IMMACULATE tonight!\n⚡ From 7:00PM to 5:00AM PST, KoiSlabs is bringing the HEAT — the auctions are going crazy and you need to be here!\n⭐ Watch LIVE: https://www.tiktok.com/@koislabs/live",
+    "saturday": "🌙 The night shift is HERE and Adonis is LIVE on KoiSlabs!\n💫 From 7:00PM to 5:00AM PST, KoiSlabs keeps the Saturday auctions going all night long — get in here before you miss a bid!\n⭐ Watch LIVE: https://www.tiktok.com/@koislabs/live",
+    "sunday": "🌠 Adonis is LIVE on KoiSlabs and closing out the weekend strong!\n🎯 From 7:00PM to 5:00AM PST, KoiSlabs is keeping the auctions alive deep into the night!\n💫 Watch LIVE: https://www.tiktok.com/@koislabs/live"
+  }
+}
