@@ -1,0 +1,54 @@
+name: KoiSlabs Notifier
+
+on:
+  schedule:
+    # Runs every 15 minutes (backup — primary trigger is cron-job.org via workflow_dispatch every 10 min)
+    - cron: '*/15 * * * *'
+  workflow_dispatch:  # also allow manual runs from the Actions tab
+
+# Allow this workflow to commit state.json back to the repo
+permissions:
+  contents: write
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    # Prevent overlapping runs
+    concurrency:
+      group: notifier
+      cancel-in-progress: false
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v6
+        with:
+          # Use a token that allows pushing
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run notifier
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          TIKTOK_USERNAME: ${{ secrets.TIKTOK_USERNAME }}
+        run: python notifier.py
+
+      - name: Commit updated state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet state.json; then
+            echo "No state changes to commit."
+          else
+            git add state.json
+            git commit -m "chore: update notifier state [skip ci]"
+            git push
+          fi
