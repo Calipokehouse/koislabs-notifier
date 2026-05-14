@@ -1,5 +1,7 @@
 {
   "was_live": true,
-  "announced_shift_ids": [],
+  "announced_shift_ids": [
+    "wednesday-0-2026-05-13"
+  ],
   "last_check": "2026-05-13T16:57:10.328193-07:00"
 }
