@@ -1,7 +1,6 @@
 {
-  "was_live": true,
+  "was_live": false,
   "announced_shift_ids": [
-    "tuesday-0-2026-05-19",
     "wednesday-0-2026-05-20",
     "thursday-0-2026-05-21",
     "friday-1-2026-05-22",
@@ -9,5 +8,5 @@
     "sunday-0-2026-05-24",
     "tuesday-0-2026-05-26"
   ],
-  "last_check": "2026-05-26T16:45:25.787623-07:00"
+  "last_check": "2026-05-27T05:38:28.195688-07:00"
 }
