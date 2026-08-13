@@ -1,32 +1,38 @@
 {
-  "_comment": "KoiSlabs shift schedule. Times are 24-hour, Pacific Time. Day shift 10am-7pm, overnight 7pm-5am next day. Both shifts run every day.",
+  "_comment": "KoiSlabs shift schedule. Times are 24-hour, Pacific Time. Each day is an array of shifts (in the order they start). When multiple shifts are simultaneously active, the notifier fires the most-recently-started shift that hasn't been announced yet today — this is what gives us one notification per streamer as they join throughout the day. End times are internal windows only (never shown in Discord messages for streamer privacy).",
 
   "monday": [
-    {"start": "10:00", "end": "19:00", "message_key": "day_shift"},
-    {"start": "19:00", "end": "05:00", "message_key": "overnight_shift"}
+    {"start": "09:00", "end": "18:00", "message_key": "monday_presley"},
+    {"start": "10:00", "end": "20:00", "message_key": "monday_orion"},
+    {"start": "18:00", "end": "04:00", "message_key": "monday_martin"}
   ],
   "tuesday": [
-    {"start": "10:00", "end": "19:00", "message_key": "day_shift"},
-    {"start": "19:00", "end": "05:00", "message_key": "overnight_shift"}
+    {"start": "10:30", "end": "19:00", "message_key": "tuesday_matt"},
+    {"start": "11:30", "end": "19:00", "message_key": "tuesday_adonis"},
+    {"start": "21:00", "end": "05:00", "message_key": "tuesday_scooby"}
   ],
   "wednesday": [
-    {"start": "10:00", "end": "19:00", "message_key": "day_shift"},
-    {"start": "19:00", "end": "05:00", "message_key": "overnight_shift"}
+    {"start": "10:30", "end": "19:00", "message_key": "wednesday_matt"},
+    {"start": "11:30", "end": "19:00", "message_key": "wednesday_adonis"},
+    {"start": "21:00", "end": "05:00", "message_key": "wednesday_scooby"}
   ],
   "thursday": [
-    {"start": "10:00", "end": "19:00", "message_key": "day_shift"},
-    {"start": "19:00", "end": "05:00", "message_key": "overnight_shift"}
+    {"start": "10:30", "end": "19:00", "message_key": "thursday_matt"},
+    {"start": "11:30", "end": "19:00", "message_key": "thursday_adonis"},
+    {"start": "21:00", "end": "05:00", "message_key": "thursday_scooby"}
   ],
   "friday": [
-    {"start": "10:00", "end": "19:00", "message_key": "day_shift"},
-    {"start": "19:00", "end": "05:00", "message_key": "overnight_shift"}
+    {"start": "10:30", "end": "19:00", "message_key": "friday_matt"},
+    {"start": "11:30", "end": "19:00", "message_key": "friday_orion"},
+    {"start": "19:00", "end": "01:00", "message_key": "friday_scooby"}
   ],
   "saturday": [
-    {"start": "10:00", "end": "19:00", "message_key": "day_shift"},
-    {"start": "19:00", "end": "05:00", "message_key": "overnight_shift"}
+    {"start": "09:00", "end": "18:00", "message_key": "saturday_duo"},
+    {"start": "18:00", "end": "04:00", "message_key": "saturday_martin"}
   ],
   "sunday": [
-    {"start": "10:00", "end": "19:00", "message_key": "day_shift"},
-    {"start": "19:00", "end": "05:00", "message_key": "overnight_shift"}
+    {"start": "09:00", "end": "18:00", "message_key": "sunday_presley"},
+    {"start": "10:00", "end": "20:00", "message_key": "sunday_orion"},
+    {"start": "18:00", "end": "04:00", "message_key": "sunday_martin"}
   ]
 }
