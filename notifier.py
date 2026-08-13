@@ -67,19 +67,6 @@ def is_tiktok_live(username: str) -> bool:
 
     body = resp.text
 
-    # Live signals (TikTok embeds JSON in the page).
-    #
-    # Empirical findings (May 2026 inspection of live vs non-live profile pages):
-    #   - '"isLiveBroadcast":true' and '"liveRoomStatus":0' appear in BOTH
-    #     live and not-live pages whenever a creator has ever opened a live
-    #     room. They are unreliable signals.
-    #   - The actual broadcast state lives in the JSON field '"status"':
-    #         2 = currently broadcasting
-    #         4 = ended
-    #     '"status":2' appears (twice) on a truly-live page in unambiguous
-    #     live-related JSON contexts (alongside roomId, liveRoom, startTime,
-    #     liveRoomStats, userCount, enterCount...). '"status":4' appears on a
-    #     not-live page. They are reliable signals.
     live_signals = [
         '"status":2',
     ]
@@ -139,23 +126,21 @@ def shift_window(now: datetime, day: str, start: str, end: str) -> tuple[datetim
     return start_dt, end_dt
 
 
-def get_active_shift(now: datetime, shifts: dict) -> dict | None:
+def get_active_shift(now: datetime, shifts: dict):
     """
     Find which shift is currently active based on the wall clock.
     Returns dict with keys: shift_id, day, shift_num, start, end, message_key
     or None if no shift is currently scheduled.
 
-    When multiple shifts overlap (e.g., Sun day shift overlapping with Sun
-    overnight shift's 11:40pm start), prefer the shift that started most
-    recently — that's the new streamer taking over.
+    When multiple shifts overlap (e.g., day-shift streamer still live when the
+    next streamer joins), prefer the shift that started most recently — that's
+    the new streamer taking over.
     """
     days = ["monday", "tuesday", "wednesday", "thursday",
             "friday", "saturday", "sunday"]
 
     candidates = []
 
-    # Check shifts that started today AND shifts that started yesterday
-    # (overnight shifts may still be active).
     for offset in (0, 1):
         check_date = now - timedelta(days=offset)
         day_name = days[check_date.weekday()]
@@ -177,7 +162,6 @@ def get_active_shift(now: datetime, shifts: dict) -> dict | None:
     if not candidates:
         return None
 
-    # Prefer the most recently started shift (handles overlap at shift change)
     candidates.sort(key=lambda c: c["start"], reverse=True)
     return candidates[0]
 
@@ -207,7 +191,6 @@ def prune_old_announced_ids(state: dict, now: datetime) -> None:
     cutoff = (now - timedelta(days=7)).date().isoformat()
     pruned = []
     for sid in state["announced_shift_ids"]:
-        # ID format: day-idx-YYYY-MM-DD (date is the last 10 chars)
         date_part = sid[-10:]
         if date_part >= cutoff:
             pruned.append(sid)
@@ -233,19 +216,32 @@ def post_to_discord(content: str) -> None:
 
 
 def get_message_for_shift(active_shift: dict, messages: dict) -> str:
-    """Look up the right message variant for the current shift + day."""
+    """
+    Look up the Discord message for the current shift.
+
+    Two supported formats in messages.json:
+      1. Flat:   {"monday_presley": "message string"}
+      2. Nested: {"day_shift": {"monday": "message string", ...}}
+
+    Format 1 is the modern per-streamer style; format 2 is the legacy
+    per-shift-group style. Both work.
+    """
     message_key = active_shift["message_key"]
     day = active_shift["day"]
 
     if message_key not in messages:
-        print(f"[warn] No message group for key '{message_key}'", file=sys.stderr)
+        print(f"[warn] No message for key '{message_key}'", file=sys.stderr)
         return f"🔴 Calipokehouse is LIVE on TikTok! {TIKTOK_LIVE_URL}"
 
-    group = messages[message_key]
-    if day in group:
-        return group[day]
-    if "default" in group:
-        return group["default"]
+    entry = messages[message_key]
+
+    if isinstance(entry, str):
+        return entry
+    if isinstance(entry, dict):
+        if day in entry:
+            return entry[day]
+        if "default" in entry:
+            return entry["default"]
 
     print(f"[warn] No message for {message_key}/{day}", file=sys.stderr)
     return f"🔴 Calipokehouse is LIVE on TikTok! {TIKTOK_LIVE_URL}"
@@ -273,14 +269,6 @@ def main() -> None:
     else:
         print(f"[info] is_live={is_live}  active_shift=None")
 
-    # Decision rule (with two-tick confirmation):
-    # Fire notification IFF:
-    #   - Stream is currently live, AND
-    #   - Stream was also live on the PREVIOUS tick (guards against TikTok
-    #     transient/cached "live" indicators that can flicker even when the
-    #     stream isn't actually running yet), AND
-    #   - There's a scheduled shift active right now, AND
-    #   - This shift hasn't been announced yet today
     was_live_previous = state.get("was_live", False)
     if is_live and active_shift:
         if active_shift["shift_id"] in state["announced_shift_ids"]:
