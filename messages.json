@@ -1,0 +1,30 @@
+{
+  "_comment": "KoiSlabs Discord notification messages. Each key is a message_key from shifts.json. Value is the exact Discord message. End times are intentionally omitted from all messages for streamer privacy/safety.",
+
+  "monday_presley": "✨ Presley is LIVE on KoiSlabs and the auctions are STARTING! 🔥\n⚡ Kick off your Monday right — starting at 9:00AM PST, KoiSlabs is auctioning slabs and you don't want to miss a bid!\n👀 Watch LIVE: https://www.tiktok.com/@koislabs/live",
+  "monday_ruby": "🌟 Ruby has joined Presley on KoiSlabs — auction crew IN FULL FORCE! 💥\n🎯 The energy just DOUBLED — starting at 10:00AM PST, Ruby is jumping on to keep the KoiSlabs bids flying!\n🚀 Watch LIVE: https://www.tiktok.com/@koislabs/live",
+  "monday_martin": "🌙 Martin has joined Ruby on KoiSlabs and the night shift is TAKING OVER!\n💫 Starting at 6:00PM PST, Martin is jumping on to keep the KoiSlabs auctions going deep into the night — get in here before you miss a bid!\n⭐ Watch LIVE: https://www.tiktok.com/@koislabs/live",
+
+  "tuesday_matt": "🃏 Matt is LIVE on KoiSlabs and the Tuesday auctions are ROLLING! 💥\n🎯 Back at it — starting at 10:30AM PST, Matt is running the KoiSlabs bids and the slabs are flying!\n🚀 Watch LIVE: https://www.tiktok.com/@koislabs/live",
+  "tuesday_adonis": "🌟 Adonis has joined Matt on KoiSlabs — auction lineup is STACKED! 🔥\n🎯 The crew just doubled up — starting at 11:30AM PST, Adonis is jumping in to keep the KoiSlabs energy pumping!\n🚀 Watch LIVE: https://www.tiktok.com/@koislabs/live",
+  "tuesday_scooby": "🌙 The night shift has ARRIVED and Scooby is LIVE on KoiSlabs!\n💫 Starting at 9:00PM PST, Scooby is holding it down for the late-night KoiSlabs bids — get in here before you miss a hit!\n⭐ Watch LIVE: https://www.tiktok.com/@koislabs/live",
+
+  "wednesday_matt": "🃏 Matt is back and LIVE on KoiSlabs — Wednesday auctions are IN MOTION! 💥\n🎯 We're keeping it rolling — starting at 10:30AM PST, Matt is auctioning slabs and the bids are flying at KoiSlabs!\n🚀 Watch LIVE: https://www.tiktok.com/@koislabs/live",
+  "wednesday_adonis": "🌟 Adonis has joined Matt on KoiSlabs — the auction duo is LOCKED IN! 🔥\n🎯 Backup has arrived — starting at 11:30AM PST, Adonis is hopping in to crank up the KoiSlabs energy!\n🚀 Watch LIVE: https://www.tiktok.com/@koislabs/live",
+  "wednesday_scooby": "🌌 Scooby is LIVE and the night shift is IN EFFECT on KoiSlabs!\n💫 Starting at 9:00PM PST, Scooby is running the late-night bids on KoiSlabs — the auctions don't stop!\n⭐ Watch LIVE: https://www.tiktok.com/@koislabs/live",
+
+  "thursday_matt": "🏆 Matt is LIVE on KoiSlabs and Thursday is HITTING! 💥\n🎯 Almost the weekend — starting at 10:30AM PST, Matt is running KoiSlabs and the slab auctions are HEATING UP!\n🚀 Watch LIVE: https://www.tiktok.com/@koislabs/live",
+  "thursday_adonis": "🌟 Adonis has joined Matt on KoiSlabs — the auction duo is BACK! 🔥\n🎯 The crew is locked in — starting at 11:30AM PST, Adonis is jumping on to keep KoiSlabs cooking!\n🚀 Watch LIVE: https://www.tiktok.com/@koislabs/live",
+  "thursday_scooby": "🌠 Scooby is LIVE and the night crew has taken over KoiSlabs!\n💫 Starting at 9:00PM PST, Scooby is holding down the late-night KoiSlabs bids deep into the night!\n⭐ Watch LIVE: https://www.tiktok.com/@koislabs/live",
+
+  "friday_matt": "🎯 Matt is LIVE on KoiSlabs and Friday is HERE! 🌟\n💫 Closing out the week strong — starting at 10:30AM PST, Matt is running the KoiSlabs bids and the slabs are moving all day!\n🚀 Watch LIVE: https://www.tiktok.com/@koislabs/live",
+  "friday_ruby": "🌟 Ruby has joined Matt on KoiSlabs — the Friday crew is COMPLETE! 🔥\n🎯 Weekend vibes incoming — starting at 11:30AM PST, Ruby is jumping in to keep the KoiSlabs bids flying!\n🚀 Watch LIVE: https://www.tiktok.com/@koislabs/live",
+  "friday_scooby": "🌙 Scooby is LIVE and the Friday night shift has TAKEN OVER on KoiSlabs!\n💫 Starting at 7:00PM PST, Scooby is running the late-night KoiSlabs bids — the auctions are going crazy tonight!\n⭐ Watch LIVE: https://www.tiktok.com/@koislabs/live",
+
+  "saturday_duo": "✨ Adonis & Presley are LIVE on KoiSlabs and Saturday auctions are STARTING! 🔥\n⚡ Weekend mode is ON — starting at 9:00AM PST, the duo is opening up the KoiSlabs bids and the slabs are flying!\n👀 Watch LIVE: https://www.tiktok.com/@koislabs/live",
+  "saturday_martin": "🌙 Martin is LIVE and the Saturday night shift has TAKEN OVER on KoiSlabs!\n💫 Starting at 6:00PM PST, Martin is holding down the late-night KoiSlabs bids — the auctions are going deep into the night!\n⭐ Watch LIVE: https://www.tiktok.com/@koislabs/live",
+
+  "sunday_presley": "🌟 Presley is back on KoiSlabs and Sunday is READY TO GO! 💫\n🎯 One more day of weekend rips — starting at 9:00AM PST, Presley is running the KoiSlabs auctions and the bids are heating up!\n🚀 Watch LIVE: https://www.tiktok.com/@koislabs/live",
+  "sunday_ruby": "🌟 Ruby has joined Presley on KoiSlabs — Sunday crew is LOCKED IN! 🔥\n🎯 One last day of the weekend — starting at 10:00AM PST, Ruby is jumping in to keep the KoiSlabs bids rolling!\n🚀 Watch LIVE: https://www.tiktok.com/@koislabs/live",
+  "sunday_martin": "🌙 Martin has joined Ruby on KoiSlabs — Sunday night shift is IN!\n💫 Starting at 6:00PM PST, Martin is holding down the late-night KoiSlabs bids to close out the weekend right!\n⭐ Watch LIVE: https://www.tiktok.com/@koislabs/live"
+}
